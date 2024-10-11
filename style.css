@@ -4,24 +4,35 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+
+main {
+    padding-top: 20px;
 }
 
 #game {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 1320px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     background-color: #1e1e2f;
-    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    position: relative;
-    text-align: center;
+    padding: 10px;
+    margin : auto;
+}
+
+#leftColumn, #rightColumn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
 }
 
 #logoContainer {
     text-align: center;
     margin-bottom: 10px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 #logo {
@@ -40,11 +51,16 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    border: 2px solid #feac32;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .stat {
-    font-size: 18px;
-    margin: 0 5px;
+    font-size: 24px;
+    margin: 0px 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
 }
 
 strong {
@@ -54,12 +70,13 @@ strong {
 #controls {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 #controls button {
-    padding: 15px;
-    font-size: 16px;
+    padding: 18px;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #feac32;
     border: none;
     border-radius: 8px;
@@ -82,19 +99,17 @@ strong {
 }
 
 #monsterStats {
-    display: none;
     background-color: #c70d0d;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #monsterStats img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 #text {
@@ -103,22 +118,30 @@ strong {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
-    font-size: 16px;
-}
-
-button:focus {
-    outline: none;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
 }
 
 #sceneImageContainer {
     text-align: center;
-    margin-top: 20px;
 }
 
 #sceneImage {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+button:focus {
+    outline: none;
+}
+
+footer {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #feac32;
+    text-align: center;
 }
 
 /* Animation */
@@ -134,9 +157,23 @@ button:focus {
     }
 }
 
-/* Hover Effect */
 #controls button:hover {
     animation: buttonBounce 0.5s;
     background-color: #ffcc66;
     box-shadow: 0 6px 12px rgba(255, 204, 102, 0.7);
+}
+
+@media (max-width: 768px) {
+    #game {
+        flex-direction: column;
+    }
+
+    #leftColumn, #rightColumn {
+        padding: 10px;
+    }
+
+    #controls button {
+        font-size: 16px;
+        padding: 12px;
+    }
 }

@@ -1,36 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play RPG - Mini Quest, a thrilling adventure game where you defeat monsters, collect gold, and upgrade your weapons to defeat the evil wizard!" />
+    <meta name="keywords" content="RPG, mini quest, adventure game, defeat monsters, collect gold, weapons, evil wizard" />
+    <meta name="author" content="KD63799" />
+    
+    <meta property="og:title" content="RPG - Mini Quest" />
+    <meta property="og:description" content="Join the adventure and defeat the evil wizard in RPG - Mini Quest!" />
+    <meta property="og:image" content="https://mini-quest.vercel.app/images/logo.svg" />
+    <meta property="og:url" content="https://mini-quest.vercel.app" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RPG - Mini Quest" />
+    <meta name="twitter:description" content="A thrilling RPG adventure where you fight monsters and defeat the evil wizard!" />
+    <meta name="twitter:image" content="https://mini-quest.vercel.app/images/logo.svg" />
+    <link rel="canonical" href="https://mini-quest.vercel.app" />
+
+    <link rel="icon" type="image/png" href="./images/logo.svg" />
+    <link rel="apple-touch-icon" href="https://mini-quest.vercel.app/images/logo.svg" /> 
+
     <link rel="stylesheet" href="./style.css" />
-    <title>RPG - Mini Quest</title>
+    <title>RPG - Mini Quest | Defeat Monsters and Save the World!</title>
   </head>
   <body>
-    <div id="game">
-      <div id="logoContainer">
-        <img id="logo" src="./images/logo.svg" alt="Game Logo" />
+    <header>
+    </header>
+
+    <main>
+      <div id="game">
+        <div id="leftColumn">
+          <div id="logoContainer">
+            <img id="logo" src="./images/logo.svg" alt="RPG Mini Quest Logo" />
+          </div>
+          <section id="stats">
+            <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+            <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+          </section>
+    
+          <section id="controls">
+            <button id="button1" aria-label="Go to the shop">Go to the shop</button>
+            <button id="button2" aria-label="Go to the cave">Go to the cave</button>
+            <button id="button3" aria-label="Go to the forest">Go to the forest</button>
+          </section>
+
+          <section id="text" role="region" aria-label="Game narration">
+            Welcome to Dragon Repeller! Defeat the evil wizard threatening the world. You are standing in the town square. Where do you want to go? Use the buttons above.
+          </section>
+
+        </div>
+    
+        <div id="rightColumn">
+          <section id="monsterStats" aria-live="polite">
+            <img id="monsterImage" src="" alt="Image of a monster" />
+            <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+            <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+          </section>
+    
+    
+          <section id="sceneImageContainer">
+            <img id="sceneImage" src="" alt="Current game scene image" />
+          </section>
+        </div>
       </div>
-      <div id="stats">
-        <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
-        <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
-      </div>
-      <div id="controls">
-        <button id="button1">Go to the shop</button>
-        <button id="button2">Go to the cave</button>
-        <button id="button3">Go to the forest</button>
-      </div>
-      <div id="monsterStats">
-        <img id="monsterImage" src="" alt="Monster" />
-        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
-      </div>
-      <div id="text">
-        Welcome to Dragon Repeller! Defeat the evil wizard threatening the world. You are standing in the town square. Where do you want to go? Use the buttons above.
-      </div>
-      <div id="sceneImageContainer">
-        <img id="sceneImage" src="" alt="" />
-      </div>
-    </div>
+    </main>
+    
+
+    <footer>
+      <p>&copy; 2024 KD63799 - All rights reserved.</p>
+    </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>
